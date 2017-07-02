@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "Snippets API",
+  "main": "./bin/www",
+  "scripts": {
+    "start:dev": "nodemon ./bin/www --trace-sync-io",
+    "test": "mocha --timeout 5000",
+    "lint": "standard --env mocha",
+    "generate-apidoc": "apidoc -i ./controllers -o ./public/doc"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.12.3",
+    "debug": "^2.6.6",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "log": "^1.4.0",
+    "morgan": "^1.8.1",
+    "node-gyp": "^3.6.1",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.4",
+    "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.3.0",
+    "nodemon": "^1.11.0",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "/public"
+    ]
+  }
+}

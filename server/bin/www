@@ -1,0 +1,17 @@
+const http = require('http')
+const app = require('../app')
+const Log = require('log')
+
+const log = new Log()
+const port = parseInt('process.env.PORT', 10) || 8000
+app.set('port', port)
+
+app.get('/', (req, res) => {
+  res.send('Hello! The API is at http://localhost:' + port + '/api')
+});
+
+const server = http.createServer(app)
+
+server.listen(port, () => {
+  log.info(`App listening on port ${port}`)
+});

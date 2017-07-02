@@ -1,0 +1,145 @@
+// Variables;
+@import "components/color";
+@import "components/variables";
+
+$mobile-max: 600px;
+$tablet-min: 601px;
+$tablet-max: 991px;
+$desktop-min: 993px;
+$desktop-max: 1200px;
+$large-min: 1201px;
+$mobile-max: 600px;
+
+#app, #main, .fillHeight {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+
+#routeContainer {
+  flex: 1 0 auto;
+}
+
+#dashboardHomeHeader {
+  margin: 80px 0 40px 0;
+}
+
+#homepageContainer {
+  margin-top: 160px;
+}
+#notFoundHeader {
+  margin-top: 320px;
+}
+.sideNavElement, .cardHeader, .navHeader {
+  background-color: $primary-color;
+}
+.accentColor {
+  color: $secondary-color;
+}
+.promoTableCell > i {
+  display: block;
+}
+
+.navHeader {
+  min-height: 180px;
+  margin: 0;
+}
+.navHeaderLink {
+  margin: 0 0 32px 0;
+  padding: 16px;
+}
+.promoCaption {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+#editor {
+  min-width: 100%;
+  min-height: 600px;
+}
+
+.viewSnippetDialogBody {
+  white-space: pre-wrap;
+}
+
+.writeSnippetButtonRow > button {
+    margin-top: 4px;
+}
+.discoverCardHeader {
+  margin-bottom: 40px;
+}
+
+.discoverCardBody {
+ padding-bottom: 16px !important;
+}
+
+.discoverCardBody > .row {
+  margin-bottom: 0px !important;
+}
+
+.discoverCardViewBtn {
+  float: right;
+  margin-top: -16px;
+}
+
+.manageActionBtn {
+  margin-right: 4px;
+}
+#writeSnippetSaveBtn, #writeSnippetNewBtn, #editSettingsBtn {
+  margin-bottom: 4px;
+}
+
+.footerLink {
+  margin-left: 20px;
+}
+
+#sideNavNameDisplay, #sideNavEmailDisplay {
+  margin-left: 16px;
+  padding: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+#sideNavNameDisplay {
+  padding-top: 16px;
+  font-weight: 500;
+}
+#sideNavEmailDisplay {
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: $desktop-min) {
+  .brand-logo {
+    margin-left: 20px;
+  }
+
+  .footerWhenSideNav {
+    margin-left: 300px;
+  }
+}
+
+@media only screen and (max-width: $mobile-max) {
+  .manageActionBtn {
+    margin-right: 0px;
+    margin-top: 4px;
+  }
+  #writeSnippetSaveBtn {
+    margin-top: 4px;
+  }
+  #notFoundHeader, #homepageContainer {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-width: $tablet-min) {
+  #loginForm, #signupForm {
+    padding: 80px 0 80px 0;
+  }
+  #dashboardContainer {
+    padding-top: 40px;
+  }
+}

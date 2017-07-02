@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "username": "dbuser",
+    "password": "hunter2",
+    "database": "acc-dev",
+    "host": "192.168.178.40",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "prod": {
+    "username": "dbuser",
+    "password": "hunter2",
+    "database": "acc-prod",
+    "host": "192.168.178.40",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "dbuser",
+    "patssword": "hunter2",
+    "database": "acc-test",
+    "host": "192.168.178.40",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}
