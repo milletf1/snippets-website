@@ -192,7 +192,7 @@ class EditorSettings {
     let editorMode = localStorage.getItem(storageKeys.editorMode)
     if (editorMode === null) {
       editorMode = 'ace/mode/plain_text'
-      this.setEditorMode(editorMode)
+      this.setEditorModeSetting(editorMode)
     }
     return editorMode
   }
