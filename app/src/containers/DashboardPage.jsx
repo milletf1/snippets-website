@@ -67,7 +67,7 @@ class DashboardPage extends Component {
               <Link to='/discover'>search</Link>
             </i>
             <p className='promoCaption'>Discover</p>
-            <p className='light center'>Browser snippets created by other users</p>
+            <p className='light center'>Browse snippets created by other users</p>
           </div>
         </div>
       </div>
