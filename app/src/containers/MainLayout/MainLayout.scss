@@ -1,0 +1,35 @@
+#routeContainer {
+  flex: 1 0 auto;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+#notLoggedInContainer {
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+#contentContainer {
+  margin: 16px;
+  min-height: 83vh;
+  width: 100vw;
+}
+
+@media only screen and(min-width: 993px) {
+   #contentContainer {
+       margin-left: 316px;
+   }
+}

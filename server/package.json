@@ -8,7 +8,6 @@
     "test": "mocha --timeout 5000",
     "lint": "standard --env mocha",
     "generate-apidoc": "apidoc -i ./controllers -o ./public/doc"
-
   },
   "author": "",
   "license": "ISC",
