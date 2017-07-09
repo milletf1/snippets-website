@@ -25,8 +25,10 @@ import React, { Component } from 'react'
 
 import Utils from '../modules/Utils.js'
 
-import Pagination from '../components/Pagination.jsx'
-import DiscoverSnippetCard from '../components/DiscoverSnippetCard.jsx'
+import Pagination from
+'../components/navigation-components/Pagination/Pagination.jsx'
+import DiscoverSnippetCard from
+'../components/card-components/DiscoverSnippetCard/DiscoverSnippetCard.jsx'
 
 /**
  * Discover snippets page.

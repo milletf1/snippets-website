@@ -1,6 +1,10 @@
 // Variables;
 @import "components/color";
 @import "components/variables";
+@import "../containers/CreatePage";
+@import "../containers/HomePage";
+@import "../containers/MainLayout";
+@import "../containers/DashboardPage";
 
 $mobile-max: 600px;
 $tablet-min: 601px;
@@ -17,16 +21,11 @@ $mobile-max: 600px;
   margin: 0;
 }
 
-#routeContainer {
-  flex: 1 0 auto;
-}
-
 #dashboardHomeHeader {
   margin: 80px 0 40px 0;
 }
-
-#homepageContainer {
-  margin-top: 160px;
+#signupForm, #loginForm {
+  margin: 16px;
 }
 #notFoundHeader {
   margin-top: 320px;
@@ -55,10 +54,6 @@ $mobile-max: 600px;
   font-weight: 500;
   margin-top: 5px;
   margin-bottom: 0;
-}
-#editor {
-  min-width: 100%;
-  min-height: 600px;
 }
 
 .viewSnippetDialogBody {
@@ -132,14 +127,5 @@ $mobile-max: 600px;
   }
   #notFoundHeader, #homepageContainer {
     margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: $tablet-min) {
-  #loginForm, #signupForm {
-    padding: 80px 0 80px 0;
-  }
-  #dashboardContainer {
-    padding-top: 40px;
   }
 }

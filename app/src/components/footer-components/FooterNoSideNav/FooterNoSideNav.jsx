@@ -22,21 +22,19 @@
 'use strict'
 
 import React, { Component } from 'react'
-
-import SideNavSimpleLink from './side-nav-components/SideNavSimpleLink.jsx'
+import FooterContent from '../FooterContent/FooterContent.jsx'
 
 /**
- * Side nav that displays when a user is not logged in on a mobile device.
+ * Footer component.  Displays when side nav is not visible.
  * @author Tim Miller
  */
-class LogoutMobileSideNav extends Component {
+class FooterNoSideNav extends Component {
   render () {
     return (
-      <ul id='nav-mobile' className='right hide-on-med-and-down'>
-        <SideNavSimpleLink linkTo='/login' linkText='Log in' />
-        <SideNavSimpleLink linkTo='/signup' linkText='Sign up' />
-      </ul>
+      <footer className='page-footer'>
+        <FooterContent />
+      </footer>
     )
   }
 }
-export default LogoutMobileSideNav
+export default FooterNoSideNav

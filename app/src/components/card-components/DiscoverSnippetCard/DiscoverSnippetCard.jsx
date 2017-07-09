@@ -24,7 +24,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import DisplaySnippetDialog from '../components/DisplaySnippetDialog.jsx'
+import DisplaySnippetDialog from
+'../../dialog-components/DisplaySnippetDialog/DisplaySnippetDialog.jsx'
 
 /**
  * Material card component for displaying discovered snippets.

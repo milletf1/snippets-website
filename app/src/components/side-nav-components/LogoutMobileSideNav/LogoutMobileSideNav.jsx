@@ -22,31 +22,21 @@
 'use strict'
 
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
-import SideNavHeaderTitle from './SideNavHeaderTitle.jsx'
+import SideNavSimpleLink from '../SideNavSimpleLink/SideNavSimpleLink.jsx'
 
 /**
- * Header component for side nav when an account has logged in.
+ * Side nav that displays when a user is not logged in on a mobile device.
  * @author Tim Miller
  */
-class LoginSideNavHeader extends Component {
+class LogoutMobileSideNav extends Component {
   render () {
     return (
-      <li className='sideNavElement'>
-        <div className='navHeader'>
-          <SideNavHeaderTitle titleText='Snippets' />
-          <span id='sideNavNameDisplay' className='white-text'>{this.props.name}</span>
-          <span id='sideNavEmailDisplay' className='white-text'>{this.props.email}</span>
-        </div>
-      </li>
+      <ul id='nav-mobile' className='right hide-on-med-and-down'>
+        <SideNavSimpleLink linkTo='/login' linkText='Log in' />
+        <SideNavSimpleLink linkTo='/signup' linkText='Sign up' />
+      </ul>
     )
   }
 }
-
-LoginSideNavHeader.propTypes = {
-  name: PropTypes.string.isRequired,
-  email: PropTypes.string.isRequired
-}
-
-export default LoginSideNavHeader
+export default LogoutMobileSideNav

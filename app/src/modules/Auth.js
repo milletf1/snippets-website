@@ -72,6 +72,8 @@ class Auth {
    */
   static isUserAuthenticated () {
     return localStorage.getItem(this.getStorageKeys().token) != null
+
+
   }
 
   /**
@@ -139,6 +141,7 @@ class Auth {
     let tokenLifespan = this.getTokenLifespan()
 
     if (tokenAge > (tokenLifespan / 2)) {
+
       if (tokenAge > tokenLifespan) {
         this.deauthenticateUser()
       } else {
@@ -148,7 +151,6 @@ class Auth {
             deferred.resolve(token)
           })
           .fail(err => {
-            console.log(err)
             deferred.reject({ message: 'jwt expired' })
           })
       }

@@ -27,8 +27,9 @@ import Auth from '../modules/Auth'
 import Account from '../modules/Account'
 import EditorSettings from '../modules/EditorSettings'
 import EditorSession from '../modules/EditorSession'
-import EditorSettingsDialog from '../components/EditorSettingsDialog.jsx'
-import RaisedButton from '../components/buttons/RaisedButton.jsx'
+import EditorSettingsDialog from
+'../components/dialog-components/EditorSettingsDialog/EditorSettingsDialog.jsx'
+import RaisedButton from '../components/button-components/RaisedButton/RaisedButton.jsx'
 
 /**
  * Write/edit snippets page.
@@ -155,7 +156,7 @@ class CreatePage extends Component {
   }
 
   getEditor () {
-    return ace.edit('editor')
+    return ace.edit('codeEditor')
   }
 
   componentDidMount () {
@@ -218,6 +219,7 @@ class CreatePage extends Component {
 
   onSettingsClick () {
     $('#editorSettingsDialog').modal('open')
+
   }
 
   onSaveSnippetClick () {
@@ -245,6 +247,7 @@ class CreatePage extends Component {
       },
       success: res => {
         if (!!res.snippets && res.snippets.length === 1) {
+
           this.setState({
             snippet: {
               body: res.snippets[0].body,
@@ -341,11 +344,10 @@ class CreatePage extends Component {
             }
           }
         })
-      })
-      .fail(err => {
-        if (err.message === 'jwt expired') {
-          this.logout()
-        }
+      }).fail(err => {
+          if (err.message === 'jwt expired') {
+            this.logout()
+          }
       })
   }
 
@@ -367,7 +369,7 @@ class CreatePage extends Component {
         </div>
         <div className='row'>
           <div className='col s12 l9 xl10'>
-            <div className='col s12' id='editor'>Loading...</div>
+            <div className='col s12' id="codeEditor"></div>
           </div>
           <div className='col s12 l3 xl2'>
             <div class='row'>
@@ -378,7 +380,7 @@ class CreatePage extends Component {
                   buttonDisabled={this.state.saveDisabled}
                   buttonClick={this.onSaveSnippetClick}
                   buttonRightIcon='send'
-                  buttonLabel='Save' />
+                  buttonLabel='Save'/>
               </div>
               <div className='col s12'>
                 <button

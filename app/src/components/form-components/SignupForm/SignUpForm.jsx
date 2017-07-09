@@ -24,7 +24,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import RaisedButton from './buttons/RaisedButton.jsx'
+import RaisedButton from
+'../../button-components/RaisedButton/RaisedButton.jsx'
 
 /**
  * Signup form component.

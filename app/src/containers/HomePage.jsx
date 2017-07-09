@@ -31,21 +31,21 @@ import { Link } from 'react-router'
 class HomePage extends Component {
   render () {
     return (
-      <div id='homepageContainer' className='container'>
-        <div className='row'>
-          <div className='col s12 l6'>
-            <h3 className='center-align'>Welcome to Snippets</h3>
+      <div id="homepageContainer" className="container">
+        <div className="row">
+          <div className="col s12 l6">
+            <h3 className="center-align">Welcome to Snippets</h3>
             <p>
               Have you ever needed somewhere to save snippets and boilerplate code quickly and easily,
               without the costs of settting up a new Git repository? Snippets may be able to help.
             </p>
-            <br />
-            <p className='center-align'>
+            <br/>
+            <p className="center-align">
               <Link to='/signup'>Create an account</Link> and try it out today!
             </p>
           </div>
-          <div className='col s12 l6'>
-            <img src='img/monitor-home.jpg' />
+          <div className="col s12 l6">
+            <img src="img/monitor-home.jpg" />
           </div>
         </div>
       </div>

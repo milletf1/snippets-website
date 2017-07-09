@@ -62,7 +62,7 @@ class EditorSettings {
       wordWrap = false
       this.setWordWrapSetting(wordWrap)
     } else if (typeof wordWrap !== 'boolean') {
-      wordWrap = wordWrap !== 'false'
+      wordWrap = wordWrap === 'false'? false : true
     }
     return wordWrap
   }
@@ -93,7 +93,7 @@ class EditorSettings {
       showInvisibles = false
       this.setShowInvisiblesSetting(showInvisibles)
     } else if (typeof showInvisibles !== 'boolean') {
-      showInvisibles = showInvisibles !== 'false'
+      showInvisibles = showInvisibles === 'false'? false : true
     }
     return showInvisibles
   }
@@ -126,7 +126,7 @@ class EditorSettings {
       softTabs = true
       this.setSoftTabsSetting(softTabs)
     } else if (typeof softTabs !== 'boolean') {
-      softTabs = softTabs !== 'false'
+      softTabs = softTabs === 'false'? false : true
     }
     return softTabs
   }
@@ -187,7 +187,7 @@ class EditorSettings {
    *
    * @returns {string} Editor mode (as used by editor to set mode).
    */
-  static getEditorModeSetting () {
+  static getEditorModeSetting() {
     let storageKeys = this.getEditorSettingsKeys()
     let editorMode = localStorage.getItem(storageKeys.editorMode)
     if (editorMode === null) {
@@ -202,7 +202,7 @@ class EditorSettings {
    *
    * @param {editorMode} Editor mode to set (as used by editor to set mode).
    */
-  static setEditorModeSetting (editorMode) {
+  static setEditorModeSetting(editorMode) {
     let storageKeys = this.getEditorSettingsKeys()
     localStorage.setItem(storageKeys.editorMode, editorMode)
   }
@@ -219,7 +219,7 @@ class EditorSettings {
    *
    * @returns {EditorMode[]} and array of editor modes.
    */
-  static getEditorModesList () {
+  static getEditorModesList() {
     return [
       {
         label: 'AutoHotkey',

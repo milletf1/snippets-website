@@ -23,10 +23,14 @@
 
 import React, { Component } from 'react'
 
-import FooterNoSideNav from '../components/FooterNoSideNav.jsx'
-import FooterSideNav from '../components/FooterSideNav.jsx'
-import NavBar from '../components/NavBar.jsx'
-import FixedSideNav from '../components/FixedSideNav.jsx'
+import NavBar from
+'../components/navigation-components/NavBar/NavBar.jsx'
+import FooterNoSideNav from
+'../components/footer-components/FooterNoSideNav/FooterNoSideNav.jsx'
+import FooterSideNav from
+'../components/footer-components/FooterSideNav/FooterSideNav.jsx'
+import FixedSideNav from
+'../components/side-nav-components/FixedSideNav/FixedSideNav.jsx'
 
 import Auth from '../modules/Auth'
 
@@ -42,22 +46,20 @@ class MainLayout extends Component {
           <div className='fillHeight'>
             <NavBar />
             <div id='routeContainer'>
-              <div className='row'>
-                <div className='col l4 xl3'>
-                  <FixedSideNav />
-                </div>
-                <div className='col s12 l8'>
-                  { this.props.children }
-                </div>
+              <FixedSideNav />
+              <div id="contentContainer">
+                { this.props.children }
               </div>
             </div>
             <FooterSideNav />
           </div>
                 ) : (
-                  <div className='row fillHeight'>
+                  <div className='fillHeight'>
                     <NavBar />
                     <div id='routeContainer'>
-                      { this.props.children }
+                      <div id="notLoggedInContainer">
+                        { this.props.children }
+                      </div>
                     </div>
                     <FooterNoSideNav />
                   </div>

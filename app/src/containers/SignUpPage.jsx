@@ -25,7 +25,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Auth from '../modules/Auth'
 import Account from '../modules/Account'
-import SignUpForm from '../components/SignUpForm.jsx'
+import SignUpForm from '../components/form-components/SignUpForm/SignUpForm.jsx'
 
 /**
  * Signup account page.
@@ -105,16 +105,14 @@ class SignUpPage extends Component {
 
   render () {
     return (
-      <div className='container'>
-        <div className='row'>
+        <div>
           <SignUpForm
             onSubmit={this.processForm}
             onChange={this.changeUser}
             errors={this.state.errors}
             user={this.state.user}
-                    />
+          />
         </div>
-      </div>
     )
   }
 }

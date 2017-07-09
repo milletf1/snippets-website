@@ -23,10 +23,10 @@
 
 import React, { Component } from 'react'
 
-import LoginSideNavHeader from './side-nav-components/LoginSideNavHeader.jsx'
-import SideNavSimpleLink from './side-nav-components/SideNavSimpleLink.jsx'
+import LoginSideNavHeader from '../LoginSideNavHeader/LoginSideNavHeader.jsx'
+import SideNavSimpleLink from '../SideNavSimpleLink/SideNavSimpleLink.jsx'
 
-import Account from '../modules/Account'
+import Account from '../../../modules/Account'
 
 /**
  * Fixed side navigation component.  Displays on large devices when an account is logged in.

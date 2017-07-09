@@ -27,10 +27,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 
-import LoginMobileSideNav from './LoginMobileSideNav.jsx'
-import LogoutMobileSideNav from './LogoutMobileSideNav.jsx'
+import LoginMobileSideNav from
+'../../side-nav-components/LoginMobileSideNav/LoginMobileSideNav.jsx'
+import LogoutMobileSideNav from
+'../../side-nav-components/LogoutMobileSideNav/LogoutMobileSideNav.jsx'
 
-import Auth from '../modules/Auth'
+import Auth from '../../../modules/Auth'
 
 /**
  * Navigation bar component.

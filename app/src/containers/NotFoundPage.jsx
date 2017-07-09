@@ -30,7 +30,7 @@ import React, { Component } from 'react'
 class NotFoundPage extends Component {
   render () {
     return (
-      <h1 id='notFoundHeader' className='center-align'>404 Not Found!</h1>
+        <h1 id="notFoundHeader" className="center-align">404 Not Found!</h1>
     )
   }
 }

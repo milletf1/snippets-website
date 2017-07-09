@@ -26,7 +26,7 @@ import PropTypes from 'prop-types'
 
 import Auth from '../modules/Auth'
 import Account from '../modules/Account'
-import LoginForm from '../components/LoginForm.jsx'
+import LoginForm from '../components/form-components/LoginForm/LoginForm.jsx'
 
 /**
  * Login page.
@@ -101,8 +101,7 @@ class LoginPage extends Component {
 
   render () {
     return (
-      <div className='container'>
-        <div className='row'>
+        <div>
           <LoginForm
             onSubmit={this.processForm}
             onChange={this.changeUser}
@@ -110,7 +109,6 @@ class LoginPage extends Component {
             user={this.state.user}
           />
         </div>
-      </div>
     )
   }
 }

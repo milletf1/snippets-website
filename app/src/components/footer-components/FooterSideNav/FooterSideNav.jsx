@@ -18,26 +18,25 @@
  * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * @author Tim Miller
  */
 'use strict'
 
 import React, { Component } from 'react'
+import FooterContent from '../FooterContent/FooterContent.jsx'
 
 /**
- * Footer content component.
+ * Footer component.  Displays when a side nav is visible.
  * @author Tim Miller
  */
-class FooterContent extends Component {
+class FooterSideNav extends Component {
   render () {
     return (
-      <div className='footer-copyright'>
-        <div className='container'>
-          © Copyright 2017
-          <a className='grey-text text-lighten-4 right footerLink' href='mailto:timmilller83@gmail.com'>Contact</a>
-          <a className='grey-text text-lighten-4 right footerLink' href='/doc'>Api documentation</a>
-        </div>
-      </div>
+      <footer className='page-footer footerWhenSideNav'>
+        <FooterContent />
+      </footer>
     )
   }
 }
-export default FooterContent
+export default FooterSideNav

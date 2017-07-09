@@ -19,22 +19,25 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-'use strict'
+ 'use strict'
 
-import React, { Component } from 'react'
-import FooterContent from './footer-components/FooterContent.jsx'
+ import React, { Component } from 'react'
 
 /**
- * Footer component.  Displays when side nav is not visible.
+ * Footer content component.
  * @author Tim Miller
  */
-class FooterNoSideNav extends Component {
-  render () {
-    return (
-      <footer className='page-footer'>
-        <FooterContent />
-      </footer>
-    )
-  }
-}
-export default FooterNoSideNav
+ class FooterContent extends Component {
+   render () {
+     return (
+       <div className='footer-copyright'>
+         <div className='container'>
+           © Copyright 2017
+           <a className='grey-text text-lighten-4 right footerLink' href='mailto:timmilller83@gmail.com'>Contact</a>
+           <a className='grey-text text-lighten-4 right footerLink' href='/doc'>Api documentation</a>
+         </div>
+       </div>
+     )
+   }
+ }
+export default FooterContent

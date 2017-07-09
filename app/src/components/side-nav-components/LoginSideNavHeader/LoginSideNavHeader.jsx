@@ -18,25 +18,35 @@
  * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- *
- * @author Tim Miller
  */
 'use strict'
 
 import React, { Component } from 'react'
-import FooterContent from './footer-components/FooterContent.jsx'
+import PropTypes from 'prop-types'
+
+import SideNavHeaderTitle from '../SideNavHeaderTitle/SideNavHeaderTitle.jsx'
 
 /**
- * Footer component.  Displays when a side nav is visible.
+ * Header component for side nav when an account has logged in.
  * @author Tim Miller
  */
-class FooterSideNav extends Component {
+class LoginSideNavHeader extends Component {
   render () {
     return (
-      <footer className='page-footer footerWhenSideNav'>
-        <FooterContent />
-      </footer>
+      <li className='sideNavElement'>
+        <div className='navHeader'>
+          <SideNavHeaderTitle titleText='Snippets' />
+          <span id='sideNavNameDisplay' className='white-text'>{this.props.name}</span>
+          <span id='sideNavEmailDisplay' className='white-text'>{this.props.email}</span>
+        </div>
+      </li>
     )
   }
 }
-export default FooterSideNav
+
+LoginSideNavHeader.propTypes = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired
+}
+
+export default LoginSideNavHeader

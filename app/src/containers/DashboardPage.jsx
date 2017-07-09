@@ -40,13 +40,10 @@ class DashboardPage extends Component {
 
   render () {
     return (
-      <div>
-        <div className='row'>
-          <div className='col s12'>
-            <h3 id='dashboardHomeHeader' className='header center-align'>Welcome, {this.state.account}!</h3>
-          </div>
-        </div>
-        <div className='row'>
+      <div id="dashboardContainer" className="container">
+        <h3 id='dashboardHomeHeader' className='header center-align'>Welcome, {this.state.account}!</h3>
+
+        <div id="dashboardOptionsContainer" className='row'>
           <div className='col s12 m4 promoTableCell'>
             <i className='large center-align material-icons'>
               <Link to='/write'>create</Link>

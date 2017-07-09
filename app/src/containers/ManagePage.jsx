@@ -28,8 +28,10 @@ import Utils from '../modules/Utils.js'
 import Account from '../modules/Account'
 import Auth from '../modules/Auth'
 
-import Pagination from '../components/Pagination.jsx'
-import DisplaySnippetDialog from '../components/DisplaySnippetDialog.jsx'
+import Pagination from
+'../components/navigation-components/Pagination/Pagination.jsx'
+import DisplaySnippetDialog from
+'../components/dialog-components/DisplaySnippetDialog/DisplaySnippetDialog.jsx'
 
 /**
  * Manage snippets page.
@@ -139,6 +141,7 @@ class ManagePage extends Component {
      * @returns {object} an Ajax request to delete a snippet with an id equal to the snippetId parameter
      */
   requestDeleteSnippet (snippetId) {
+
     return Auth.getToken()
     .then(token => {
       return $.ajax({
