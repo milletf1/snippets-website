@@ -23,7 +23,7 @@
 
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import Account from '../modules/Account'
+import Account from '../../modules/Account'
 
 /**
  * Account dashboard page.

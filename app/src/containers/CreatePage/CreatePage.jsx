@@ -23,13 +23,14 @@
 
 import React, { Component } from 'react'
 
-import Auth from '../modules/Auth'
-import Account from '../modules/Account'
-import EditorSettings from '../modules/EditorSettings'
-import EditorSession from '../modules/EditorSession'
+import Auth from '../../modules/Auth'
+import Account from '../../modules/Account'
+import EditorSettings from '../../modules/EditorSettings'
+import EditorSession from '../../modules/EditorSession'
 import EditorSettingsDialog from
-'../components/dialog-components/EditorSettingsDialog/EditorSettingsDialog.jsx'
-import RaisedButton from '../components/button-components/RaisedButton/RaisedButton.jsx'
+'../../components/dialog-components/EditorSettingsDialog/EditorSettingsDialog.jsx'
+import RaisedButton from
+'../../components/button-components/RaisedButton/RaisedButton.jsx'
 
 /**
  * Write/edit snippets page.

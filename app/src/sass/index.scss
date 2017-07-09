@@ -1,10 +1,10 @@
 // Variables;
 @import "components/color";
 @import "components/variables";
-@import "../containers/CreatePage";
-@import "../containers/HomePage";
-@import "../containers/MainLayout";
-@import "../containers/DashboardPage";
+@import "../containers/CreatePage/CreatePage";
+@import "../containers/HomePage/HomePage";
+@import "../containers/MainLayout/MainLayout";
+@import "../containers/DashboardPage/DashboardPage";
 
 $mobile-max: 600px;
 $tablet-min: 601px;

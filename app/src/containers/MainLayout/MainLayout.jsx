@@ -24,15 +24,15 @@
 import React, { Component } from 'react'
 
 import NavBar from
-'../components/navigation-components/NavBar/NavBar.jsx'
+'../../components/navigation-components/NavBar/NavBar.jsx'
 import FooterNoSideNav from
-'../components/footer-components/FooterNoSideNav/FooterNoSideNav.jsx'
+'../../components/footer-components/FooterNoSideNav/FooterNoSideNav.jsx'
 import FooterSideNav from
-'../components/footer-components/FooterSideNav/FooterSideNav.jsx'
+'../../components/footer-components/FooterSideNav/FooterSideNav.jsx'
 import FixedSideNav from
-'../components/side-nav-components/FixedSideNav/FixedSideNav.jsx'
+'../../components/side-nav-components/FixedSideNav/FixedSideNav.jsx'
 
-import Auth from '../modules/Auth'
+import Auth from '../../modules/Auth'
 
 /**
  * Page container.

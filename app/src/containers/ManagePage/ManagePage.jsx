@@ -24,14 +24,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
-import Utils from '../modules/Utils.js'
-import Account from '../modules/Account'
-import Auth from '../modules/Auth'
+import Utils from '../../modules/Utils'
+import Account from '../../modules/Account'
+import Auth from '../../modules/Auth'
 
 import Pagination from
-'../components/navigation-components/Pagination/Pagination.jsx'
+'../../components/navigation-components/Pagination/Pagination.jsx'
 import DisplaySnippetDialog from
-'../components/dialog-components/DisplaySnippetDialog/DisplaySnippetDialog.jsx'
+'../../components/dialog-components/DisplaySnippetDialog/DisplaySnippetDialog.jsx'
 
 /**
  * Manage snippets page.

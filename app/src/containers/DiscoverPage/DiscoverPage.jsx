@@ -23,12 +23,12 @@
 
 import React, { Component } from 'react'
 
-import Utils from '../modules/Utils.js'
+import Utils from '../../modules/Utils.js'
 
 import Pagination from
-'../components/navigation-components/Pagination/Pagination.jsx'
+'../../components/navigation-components/Pagination/Pagination.jsx'
 import DiscoverSnippetCard from
-'../components/card-components/DiscoverSnippetCard/DiscoverSnippetCard.jsx'
+'../../components/card-components/DiscoverSnippetCard/DiscoverSnippetCard.jsx'
 
 /**
  * Discover snippets page.

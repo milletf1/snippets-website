@@ -23,15 +23,16 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Auth from '../modules/Auth'
-import Account from '../modules/Account'
-import SignUpForm from '../components/form-components/SignUpForm/SignUpForm.jsx'
+
+import Auth from '../../modules/Auth'
+import Account from '../../modules/Account'
+import LoginForm from '../../components/form-components/LoginForm/LoginForm.jsx'
 
 /**
- * Signup account page.
+ * Login page.
  * @author Tim Miller
  */
-class SignUpPage extends Component {
+class LoginPage extends Component {
   constructor (props) {
     super(props)
 
@@ -39,7 +40,6 @@ class SignUpPage extends Component {
       errors: {},
       user: {
         email: '',
-        accountName: '',
         password: ''
       }
     }
@@ -57,7 +57,6 @@ class SignUpPage extends Component {
     const field = event.target.name
     const user = this.state.user
     user[field] = event.target.value
-
     this.setState({user})
   }
 
@@ -69,19 +68,16 @@ class SignUpPage extends Component {
   processForm (event) {
     event.preventDefault()
     this.setState({errors: {}})
-        // TODO: check everything is filled out, check passwords match, validate passwords and username
-    if (!this.state.user.accountName || !this.state.user.email || !this.state.user.password) {
+    if (!this.state.user.email || !this.state.user.password) {
       return
     }
-    const username = this.state.user.accountName
     const email = this.state.user.email
     const password = this.state.user.password
 
     $.ajax({
-      url: '/api/accounts/user',
+      url: '/api/auth',
       type: 'post',
       data: {
-        username: username,
         email: email,
         password: password
       },
@@ -96,7 +92,7 @@ class SignUpPage extends Component {
       },
       error: (xhr, status, err) => {
         const errors = {
-          signupError: xhr.responseJSON.message
+          loginError: 'Failed to login'
         }
         this.setState({ errors })
       }
@@ -106,7 +102,7 @@ class SignUpPage extends Component {
   render () {
     return (
         <div>
-          <SignUpForm
+          <LoginForm
             onSubmit={this.processForm}
             onChange={this.changeUser}
             errors={this.state.errors}
@@ -117,8 +113,8 @@ class SignUpPage extends Component {
   }
 }
 
-SignUpPage.propTypes = {
+LoginPage.propTypes = {
   router: PropTypes.object.isRequired
 }
 
-export default SignUpPage
+export default LoginPage
