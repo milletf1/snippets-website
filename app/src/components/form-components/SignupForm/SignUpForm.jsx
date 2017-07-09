@@ -34,7 +34,7 @@ import RaisedButton from
 class SignUpForm extends Component {
   render () {
     return (
-      <div id='signupForm' className='col s12 l6 offset-l3'>
+      <div id='signupForm' className='col s12 l6 offset-l3 formContainer'>
         <div className='card'>
           <div className='card-content cardHeader'>
             <span className='card-title white-text'>Create account</span>

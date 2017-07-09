@@ -20,6 +20,7 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 'use strict'
+require('./sass/index.scss')
 
 import React from 'react'
 import ReactDom from 'react-dom'

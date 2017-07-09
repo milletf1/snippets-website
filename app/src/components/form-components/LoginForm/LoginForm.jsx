@@ -37,7 +37,7 @@ const LoginForm = ({
     errors,
     user
 }) => (
-  <div id='loginForm' className='col s12 l6 offset-l3'>
+  <div id='loginForm' className='col s12 l6 offset-l3 formContainer'>
     <div className='card'>
       <div className='card-content cardHeader'>
         <span className='card-title white-text'>Login</span>
