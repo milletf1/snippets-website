@@ -1,6 +1,6 @@
 {
   "name": "Snippets",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Snippets website source code",
   "main": "webpack.config.js",
   "scripts": {
@@ -32,9 +32,10 @@
   "standard": {
     "globals": [
       "$",
-      "localStorage",
+      "ace",
       "Materialize",
-      "ace"
+      "localStorage",
+      "sessionStorage"
     ]
   }
 }
