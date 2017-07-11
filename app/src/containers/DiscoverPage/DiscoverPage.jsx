@@ -205,7 +205,7 @@ class DiscoverPage extends Component {
         </form>
         <div className='row'>
           {this.state.snippets.map(snippet =>
-            <div key={snippet.id} className='col s12 m6'>
+            <div key={snippet.id} className='col s12 m6 xl4'>
               <DiscoverSnippetCard snippet={snippet} />
             </div>
           )}

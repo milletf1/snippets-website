@@ -1,113 +1,57 @@
 @import "color";
 @import "variables";
 @import "../components/form-components/FormStyle";
+@import "../components/card-components/CardStyle";
+@import "../components/card-components/DiscoverSnippetCard/DiscoverSnippetCard";
+@import "../components/side-nav-components/LoginSideNavHeader/LoginSideNavHeader";
+@import "../components/side-nav-components/SideNavHeaderTitle/SideNavHeaderTitle";
+@import "../components/dialog-components/DisplaySnippetDialog/DisplaySnippetDialog";
+@import "../components/footer-components/FooterContent/FooterContent";
+@import "../components/footer-components/FooterSideNav/FooterSideNav";
 @import "../containers/CreatePage/CreatePage";
 @import "../containers/HomePage/HomePage";
 @import "../containers/MainLayout/MainLayout";
 @import "../containers/DashboardPage/DashboardPage";
+@import "../containers/NotFoundPage/NotFoundPage";
 
-#app, #main, .fillHeight {
+.fillHeight {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
 }
 
-#notFoundHeader {
-  margin-top: 320px;
-}
-.sideNavElement, .cardHeader, .navHeader {
-  background-color: $primary-color;
-}
 .accentColor {
   color: $secondary-color;
 }
-.promoTableCell > i {
-  display: block;
-}
 
 .navHeader {
+  background-color: $primary-color;
   min-height: 180px;
   margin: 0;
 }
-.navHeaderLink {
-  margin: 0 0 32px 0;
-  padding: 16px;
-}
-.promoCaption {
-  font-size: 1.7rem;
-  text-align: center;
-  font-weight: 500;
-  margin-top: 5px;
-  margin-bottom: 0;
-}
 
-.viewSnippetDialogBody {
-  white-space: pre-wrap;
-}
-
-.writeSnippetButtonRow > button {
+/*.writeSnippetButtonRow > button {
     margin-top: 4px;
-}
-.discoverCardHeader {
-  margin-bottom: 40px;
-}
-
-.discoverCardBody {
- padding-bottom: 16px !important;
-}
-
-.discoverCardBody > .row {
-  margin-bottom: 0px !important;
-}
-
-.discoverCardViewBtn {
-  float: right;
-  margin-top: -16px;
-}
+}*/
 
 .manageActionBtn {
   margin-right: 4px;
-}
-#writeSnippetSaveBtn, #writeSnippetNewBtn, #editSettingsBtn {
-  margin-bottom: 4px;
-}
-
-.footerLink {
-  margin-left: 20px;
-}
-
-#sideNavNameDisplay, #sideNavEmailDisplay {
-  margin-left: 16px;
-  padding: 0;
-  display: block;
-  font-size: 14px;
-  line-height: 24px;
-}
-#sideNavNameDisplay {
-  padding-top: 16px;
-  font-weight: 500;
-}
-#sideNavEmailDisplay {
-  margin-bottom: 16px;
-  font-weight: 400;
 }
 
 @media only screen and (min-width: $medium-screen-up) {
   .brand-logo {
     margin-left: 20px;
   }
-
-  .footerWhenSideNav {
-    margin-left: 300px;
-  }
 }
 
 @media only screen and (max-width: $small-screen) {
+
   .manageActionBtn {
     margin-right: 0px;
     margin-top: 4px;
   }
+
   #writeSnippetSaveBtn {
     margin-top: 4px;
   }

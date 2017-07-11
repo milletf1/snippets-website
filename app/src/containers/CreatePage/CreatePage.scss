@@ -1,5 +1,18 @@
+@import "../../sass/color";
+@import "../../sass/variables";
+
 #codeEditor {
   min-width: 100%;
   min-height: 600px;
   flex: 1 0 auto;
+}
+
+#writeSnippetSaveBtn, #writeSnippetNewBtn, #editSettingsBtn {
+  margin-bottom: 4px;
+}
+
+@media only screen and (max-width: $small-screen) {
+  #writeSnippetSaveBtn {
+    margin-top: 4px;
+  }
 }

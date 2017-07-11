@@ -1,0 +1,23 @@
+@import "../../../sass/color";
+@import "../../../sass/variables";
+
+.sideNavElementHeader {
+    background-color: $primary-color;
+}
+#sideNavNameDisplay, #sideNavEmailDisplay {
+  margin-left: 16px;
+  padding: 0;
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+#sideNavNameDisplay {
+  padding-top: 16px;
+  font-weight: 500;
+}
+
+#sideNavEmailDisplay {
+  margin-bottom: 16px;
+  font-weight: 400;
+}

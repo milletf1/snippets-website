@@ -55,7 +55,7 @@ const redirectIfNotLoggedIn = (nextState, replace) => {
 }
 
 ReactDom.render((
-  <div id='main'>
+  <div id='main' class="fillHeight">
     <Router history={browserHistory}>
       <Route component={MainLayout}>
         <Route path='/'

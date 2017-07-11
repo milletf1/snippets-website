@@ -1,0 +1,8 @@
+@import "../../../sass/color";
+@import "../../../sass/variables";
+
+@media only screen and (min-width: $medium-screen-up) {
+  .footerWhenSideNav {
+    margin-left: 300px;
+  }
+}

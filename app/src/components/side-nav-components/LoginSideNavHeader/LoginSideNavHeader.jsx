@@ -33,7 +33,7 @@ import SideNavHeaderTitle from '../SideNavHeaderTitle/SideNavHeaderTitle.jsx'
 class LoginSideNavHeader extends Component {
   render () {
     return (
-      <li className='sideNavElement'>
+      <li className='sideNavElementHeader'>
         <div className='navHeader'>
           <SideNavHeaderTitle titleText='Snippets' />
           <span id='sideNavNameDisplay' className='white-text'>{this.props.name}</span>
