@@ -40,26 +40,27 @@ class DashboardPage extends Component {
 
   render () {
     return (
-      <div id="dashboardContainer" className="container">
-        <h3 id='dashboardHomeHeader' className='header center-align'>Welcome, {this.state.account}!</h3>
+      <div id='dashboardContainer'>
+        <h1 id='dashboardHomeHeader' className='center-align'>Welcome, {this.state.account}!</h1>
 
-        <div id="dashboardOptionsContainer" className='row'>
-          <div className='col s12 m4 promoTableCell'>
+        <div id='dashboardOptionsContainer'>
+          <div className='promoTableCell'>
             <i className='large center-align material-icons'>
               <Link to='/write'>create</Link>
             </i>
             <p className='promoCaption'>Write</p>
             <p className='light center'>Write new snippets</p>
-
           </div>
-          <div className='col s12 m4 promoTableCell'>
+
+          <div className='promoTableCell'>
             <i className='large center-align material-icons'>
               <Link to='/manage'>apps</Link>
             </i>
             <p className='promoCaption'>Manage</p>
             <p className='light center'>Manage your snippets</p>
           </div>
-          <div className='col s12 m4 promoTableCell'>
+
+          <div className='promoTableCell'>
             <i className='large center-align material-icons'>
               <Link to='/discover'>search</Link>
             </i>
@@ -67,6 +68,7 @@ class DashboardPage extends Component {
             <p className='light center'>Browse snippets created by other users</p>
           </div>
         </div>
+
       </div>
     )
   }

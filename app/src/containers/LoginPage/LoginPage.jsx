@@ -101,14 +101,14 @@ class LoginPage extends Component {
 
   render () {
     return (
-        <div>
-          <LoginForm
-            onSubmit={this.processForm}
-            onChange={this.changeUser}
-            errors={this.state.errors}
-            user={this.state.user}
-          />
-        </div>
+      <div>
+        <LoginForm
+          onSubmit={this.processForm}
+          onChange={this.changeUser}
+          errors={this.state.errors}
+          user={this.state.user}
+        />
+      </div>
     )
   }
 }

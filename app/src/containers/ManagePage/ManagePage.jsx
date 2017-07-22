@@ -141,7 +141,6 @@ class ManagePage extends Component {
      * @returns {object} an Ajax request to delete a snippet with an id equal to the snippetId parameter
      */
   requestDeleteSnippet (snippetId) {
-
     return Auth.getToken()
     .then(token => {
       return $.ajax({
@@ -215,7 +214,7 @@ class ManagePage extends Component {
   render () {
     return (
       <div>
-        <div className='row'><h4>Manage Snippets</h4></div>
+        <div className='row'><h3 className='appHeader'>Manage snippets</h3></div>
         <div className='row'>
           <table className='bordered'>
             <thead>

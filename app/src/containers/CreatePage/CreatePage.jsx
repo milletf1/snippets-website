@@ -220,7 +220,6 @@ class CreatePage extends Component {
 
   onSettingsClick () {
     $('#editorSettingsDialog').modal('open')
-
   }
 
   onSaveSnippetClick () {
@@ -248,7 +247,6 @@ class CreatePage extends Component {
       },
       success: res => {
         if (!!res.snippets && res.snippets.length === 1) {
-
           this.setState({
             snippet: {
               body: res.snippets[0].body,
@@ -346,16 +344,16 @@ class CreatePage extends Component {
           }
         })
       }).fail(err => {
-          if (err.message === 'jwt expired') {
-            this.logout()
-          }
+        if (err.message === 'jwt expired') {
+          this.logout()
+        }
       })
   }
 
   render () {
     return (
       <div>
-        <div className='row'><h4>Write snippet</h4></div>
+        <div className='row'><h3 className='appHeader'>Write snippet</h3></div>
         <div className='row'>
           <div className='input-field col s12'>
             <input
@@ -370,7 +368,7 @@ class CreatePage extends Component {
         </div>
         <div className='row'>
           <div className='col s12 l9 xl10'>
-            <div className='col s12' id="codeEditor"></div>
+            <div className='col s12' id='codeEditor'>Loading...</div>
           </div>
           <div className='col s12 l3 xl2'>
             <div class='row'>
@@ -381,7 +379,7 @@ class CreatePage extends Component {
                   buttonDisabled={this.state.saveDisabled}
                   buttonClick={this.onSaveSnippetClick}
                   buttonRightIcon='send'
-                  buttonLabel='Save'/>
+                  buttonLabel='Save' />
               </div>
               <div className='col s12'>
                 <button

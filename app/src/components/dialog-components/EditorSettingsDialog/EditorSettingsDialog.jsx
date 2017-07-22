@@ -40,17 +40,17 @@ class EditorSettingsDialog extends Component {
 
   componentDidMount () {
     this.setupLabelClickListeners()
-    $('select').material_select();
+    $('select').material_select()
     $('#modeSelector').on('change', (e) => {
       this.props.onEditorModeChanged(e.target.value)
     })
+    Materialize.updateTextFields()
   }
 
   /**
    * Initializes label click listeners.
    */
   setupLabelClickListeners () {
-
     $('#softTabsLabel').on('click', event => {
       event.preventDefault()
       let newValue = !this.props.softTabs
@@ -75,11 +75,11 @@ class EditorSettingsDialog extends Component {
       <div id={this.props.modalId} className='modal'>
         <div className='modal-content'>
           <h4>Editor Settings</h4>
-          <div className="row">
-            <div className="input-field col s4">
-              <select id="modeSelector" value={this.props.editorMode}>
+          <div className='row'>
+            <div className='input-field col s4'>
+              <select id='modeSelector' value={this.props.editorMode}>
                 {this.state.editorModes.map(mode =>
-                  <option  value={mode.value}>
+                  <option value={mode.value}>
                     {mode.label}
                   </option>
                 )}
@@ -87,7 +87,7 @@ class EditorSettingsDialog extends Component {
               <label>Editor mode</label>
             </div>
 
-            <div className="input-field col s4">
+            <div className='input-field col s4'>
               <input
                 id='wordWrapInput'
                 type='checkbox'
@@ -97,7 +97,7 @@ class EditorSettingsDialog extends Component {
               <label id='wordWrapLabel' for='wordWrapInput'>Use word wrap.</label>
             </div>
 
-            <div className="input-field col s4">
+            <div className='input-field col s4'>
               <input
                 id='showInvisiblesInput'
                 type='checkbox'
@@ -107,8 +107,8 @@ class EditorSettingsDialog extends Component {
               <label id='showInvisiblesLabel' for='showInvisiblesInput'>Show invisibles.</label>
             </div>
           </div>
-          <div className="row">
-            <div className="input-field col s4">
+          <div className='row'>
+            <div className='input-field col s4'>
               <input
                 id='tabSizeInput'
                 type='number'
@@ -118,7 +118,7 @@ class EditorSettingsDialog extends Component {
               <label id='tabSizeLabel'>Tab size</label>
             </div>
 
-            <div className="input-field col s4">
+            <div className='input-field col s4'>
               <input
                 id='softTabsInput'
                 type='checkbox'
@@ -133,7 +133,7 @@ class EditorSettingsDialog extends Component {
     )
   }
 }
-//{props.editorMode === mode.value && 'selected'}
+
 EditorSettingsDialog.propTypes = {
   modalId: PropTypes.string.isRequired,
   tabSize: PropTypes.number.isRequired,

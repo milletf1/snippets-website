@@ -19,25 +19,25 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
- 'use strict'
+'use strict'
 
- import React, { Component } from 'react'
+import React, { Component } from 'react'
 
 /**
  * Footer content component.
  * @author Tim Miller
  */
- class FooterContent extends Component {
-   render () {
-     return (
-       <div className='footer-copyright'>
-         <div className='container'>
-           © Copyright 2017
-           <a className='grey-text text-lighten-4 right footerLink' href='mailto:timmilller83@gmail.com'>Contact</a>
-           <a className='grey-text text-lighten-4 right footerLink' href='/doc'>Api documentation</a>
-         </div>
-       </div>
-     )
-   }
- }
+class FooterContent extends Component {
+  render () {
+    return (
+      <div className='footer-copyright'>
+        <div className='container'>
+          © Copyright 2017
+          <a className='grey-text text-lighten-4 right footerLink' href='mailto:timmilller83@gmail.com'>Contact</a>
+          <a className='grey-text text-lighten-4 right footerLink' href='/doc'>Api documentation</a>
+        </div>
+      </div>
+    )
+  }
+}
 export default FooterContent

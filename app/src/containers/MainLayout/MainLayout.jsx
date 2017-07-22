@@ -47,7 +47,7 @@ class MainLayout extends Component {
             <NavBar />
             <div id='routeContainer'>
               <FixedSideNav />
-              <div id="contentContainer">
+              <div id='contentContainer'>
                 { this.props.children }
               </div>
             </div>
@@ -57,7 +57,7 @@ class MainLayout extends Component {
                   <div className='fillHeight'>
                     <NavBar />
                     <div id='routeContainer'>
-                      <div id="notLoggedInContainer">
+                      <div id='notLoggedInContainer'>
                         { this.props.children }
                       </div>
                     </div>

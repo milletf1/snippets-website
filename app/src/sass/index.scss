@@ -25,15 +25,15 @@
   color: $secondary-color;
 }
 
+.appHeader {
+  font-weight: 300;
+}
+
 .navHeader {
   background-color: $primary-color;
   min-height: 180px;
   margin: 0;
 }
-
-/*.writeSnippetButtonRow > button {
-    margin-top: 4px;
-}*/
 
 .manageActionBtn {
   margin-right: 4px;

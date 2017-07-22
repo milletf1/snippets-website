@@ -20,7 +20,6 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 'use strict'
-require('./sass/index.scss')
 
 import React from 'react'
 import ReactDom from 'react-dom'
@@ -40,6 +39,8 @@ import NotFoundPage from './containers/NotFoundPage/NotFoundPage.jsx'
 import Auth from './modules/Auth'
 import Account from './modules/Account'
 
+require('./sass/index.scss')
+
 injectTapEventPlugin()
 
 const redirectIfLoggedIn = (nextState, replace) => {
@@ -55,7 +56,7 @@ const redirectIfNotLoggedIn = (nextState, replace) => {
 }
 
 ReactDom.render((
-  <div id='main' class="fillHeight">
+  <div id='main' className='fillHeight'>
     <Router history={browserHistory}>
       <Route component={MainLayout}>
         <Route path='/'

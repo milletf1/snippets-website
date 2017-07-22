@@ -20,6 +20,7 @@
     "log": "^1.4.0",
     "morgan": "^1.8.1",
     "node-gyp": "^3.6.1",
+    "nodemailer": "^4.0.1",
     "pg": "^6.1.5",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.30.4",

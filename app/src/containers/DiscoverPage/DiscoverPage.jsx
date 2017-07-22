@@ -169,7 +169,7 @@ class DiscoverPage extends Component {
   render () {
     return (
       <div>
-        <div className='row'><h4 className='header'>Discover</h4></div>
+        <div className='row'><h3 className='appHeader'>Discover snippets</h3></div>
         <form action='/' onSubmit={e => this.processForm(e)}>
           <div className='row'>
             <div className='input-field col s12 l6'>
