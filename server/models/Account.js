@@ -54,7 +54,19 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         notEmpty: {msg: 'Empty password'}
       }
-    }
+    },
+    isVerified: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    },
+    verifyCode: DataTypes.STRING,
+    verifySentDate: DataTypes.DATE,
+    doPassReset: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    passRestCode: DataTypes.STRING,
+    passResetSentDate: DataTypes.DATE
   }, {
     classMethods: {
       associate: (models) => {

@@ -20,23 +20,37 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 'use strict'
-/**
- * Contains configuration settings for Express server.
- * @author Tim Miller
- */
+
+const Log = require('log')
+const bcrypt = require('bcrypt')
+const serverConfig = require('../config')
+const timestamp = new Date()
+
+const log = new Log()
+
 module.exports = {
-  /** Token for signing json web tokens. */
-  signingToken: 'superawesomesecret',
-  /** Lifespan of json web tokens. */
-  tokenLifespan: '1d',
-  /** Salt rounds for hashing account passwords. */
-  saltRounds: 10,
-  /** Maximum number of results that can be returned for GET requests. */
-  limitCap: 25,
-  /** Nodemailer host. */
-  mailerHost: 'gmail.com',
-  /** Nodemailer account name. */
-  mailerName: 'someguy@gmail.com',
-  /** Nodemailer account password. */
-  mailerPass: 'password'
+  up: (queryInterface, Sequelize) => {
+    // Add email verification fields
+    queryInterface.addColumn(
+      'Accounts',
+      'isVerified',
+      {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      }
+    )
+    queryInterface.addColumn('Accounts', 'verifyCode', Sequelize.STRING)
+    queryInterface.addColumn('Accounts', 'verifySentDate', Sequelize.DATE)
+    // add password reset fields
+    queryInterface.addColumn(
+      'Accounts',
+      'doPassReset',
+      {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      }
+    )
+    queryInterface.addColumn('Accounts', 'passRestCode', Sequelize.STRING)
+    queryInterface.addColumn('Accounts', 'passResetSentDate', Sequelize.DATE)
+  }
 }

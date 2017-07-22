@@ -96,6 +96,7 @@ const createUser = (req, res) => {
 
   let options = getFindAccountOptions(req.body)
   let resAccount = {}
+  let verifyCode = null
 
   return Account.findAll(options)
     .then(accounts => {
@@ -107,18 +108,32 @@ const createUser = (req, res) => {
     })
     .then(account => {
       if (account) {
-        // TODO: this should send an account verification email instead (get website working first!)
-        resAccount.id = account.id
-        resAccount.username = account.username
-        resAccount.email = account.email
-        return AccountType.findOne({where: {id: account.accountTypeId}})
+        switch (process.env.NODE_ENV) {
+          case 'prod':
+            log.info('send email instead')
+            return res.status(200).send({message: 'an account verification email has been sent'})
+            break
+          case 'dev':
+          case 'test':
+          default:
+            resAccount.id = account.id
+            resAccount.username = account.username
+            resAccount.email = account.email
+            verifyCode = account.verifyCode
+            return AccountType.findOne({where: {id: account.accountTypeId}})
+            break
+        }
       }
     })
     .then((accountType) => {
-      if (accountType) {
+      if (accountType && accountType.name) {
         resAccount.accountType = accountType
         let token = TokenHandler.generateToken(resAccount, serverConfig.signingToken)
-        return res.status(200).send({account: resAccount, token: token})
+        return res.status(200).send({
+          account: resAccount,
+          token: token,
+          verifyCode: verifyCode
+        })
       }
     })
     .catch(err => {
@@ -265,6 +280,11 @@ const createAccount = (params, accountTypeName) => {
     })
     .then(accountType => {
       account.accountTypeId = accountType.id
+      if (accountTypeName === 'User') {
+        account.isVerified = false
+      }
+      account.verifyCode = 'codeplaceholder'
+      account.verifySentDate = new Date()
       return Account.create(account)
     })
 }
