@@ -71,6 +71,6 @@ class NavBar extends Component {
   }
 }
 NavBar.propTypes = {
-  router: PropTypes.object.isRequired
+  router: PropTypes.object
 }
 export default NavBar

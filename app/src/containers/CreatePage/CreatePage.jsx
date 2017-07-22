@@ -256,7 +256,7 @@ class CreatePage extends Component {
             saveDisabled: false
           })
           $('#snippetNameInput').change()
-          let editor = ace.edit('editor')
+          let editor = ace.edit('codeEditor')
           editor.setValue(res.snippets[0].body, 1)
         }
       },
@@ -371,7 +371,7 @@ class CreatePage extends Component {
             <div className='col s12' id='codeEditor'>Loading...</div>
           </div>
           <div className='col s12 l3 xl2'>
-            <div class='row'>
+            <div className='row'>
               <div className='col s12'>
                 <RaisedButton
                   buttonId='writeSnippetSaveBtn'

@@ -44,7 +44,9 @@ class EditorSettingsDialog extends Component {
     $('#modeSelector').on('change', (e) => {
       this.props.onEditorModeChanged(e.target.value)
     })
-    Materialize.updateTextFields()
+    if (Materialize && Materialize.updateTextFields) {
+      Materialize.updateTextFields()
+    }
   }
 
   /**
@@ -92,7 +94,7 @@ class EditorSettingsDialog extends Component {
                 id='wordWrapInput'
                 type='checkbox'
                 checked={this.props.wordWrap}
-                onChange={e => null}
+                onChange={e => this.props.onWordWrapChange(e.target.value)}
               />
               <label id='wordWrapLabel' for='wordWrapInput'>Use word wrap.</label>
             </div>
@@ -102,7 +104,7 @@ class EditorSettingsDialog extends Component {
                 id='showInvisiblesInput'
                 type='checkbox'
                 checked={this.props.showInvisibles}
-                onChange={e => null}
+                onChange={e => this.props.onShowInvisiblesChanged(e.target.value)}
               />
               <label id='showInvisiblesLabel' for='showInvisiblesInput'>Show invisibles.</label>
             </div>
@@ -123,7 +125,7 @@ class EditorSettingsDialog extends Component {
                 id='softTabsInput'
                 type='checkbox'
                 checked={this.props.softTabs}
-                onChange={e => null}
+                onChange={e => this.props.onSoftTabsChange(e.target.value)}
               />
               <label id='softTabsLabel' for='softTabsInput'>Use soft tabs.</label>
             </div>

@@ -69,10 +69,9 @@ class DisplaySnippetDialog extends Component {
 }
 
 DisplaySnippetDialog.propTypes = {
-  modalId: PropTypes.string.isRequired,
-  modalTitle: PropTypes.string.isRequired,
-  modalBody: PropTypes.string.isRequired
-
+  modalId: PropTypes.string,
+  modalTitle: PropTypes.string,
+  modalBody: PropTypes.string
 }
 
 export default DisplaySnippetDialog
